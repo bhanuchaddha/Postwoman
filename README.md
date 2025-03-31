@@ -2,7 +2,7 @@
 
 A lightweight, feature-rich API development environment that simplifies the process of building, testing, and documenting APIs. Built with React and Ant Design, this project is inspired by Postman and provides a clean, intuitive interface for making HTTP requests and analyzing responses.
 
-![Postwoman Screenshot](screenshot.png)
+![Postwoman Screenshot](postwoman.png)
 
 ## Features
 
