@@ -1,0 +1,310 @@
+@import '~antd/dist/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --pink-light: #ffeef8;
+  --pink-medium: #ffcce6;
+  --pink-primary: #ff80bf;
+  --pink-dark: #ff4da6;
+  --pink-extra-dark: #ff1a8c;
+  --purple-light: #f5e1ff;
+  --border-radius: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--pink-light);
+}
+
+/* Main layout styles */
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--pink-light);
+}
+
+/* Sidebar styles */
+.ant-layout-sider {
+  background-color: white !important;
+  box-shadow: 0 2px 12px rgba(255, 128, 191, 0.15);
+  z-index: 10;
+}
+
+.sidebar-header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--pink-medium);
+  background-color: var(--pink-light);
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pink-extra-dark);
+}
+
+/* Request panel styles */
+.request-panel {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 8px rgba(255, 128, 191, 0.1);
+  margin-bottom: 16px;
+}
+
+.request-panel .ant-tabs-nav {
+  margin-bottom: 0;
+}
+
+.request-panel .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--pink-dark);
+}
+
+.request-panel .ant-tabs-ink-bar {
+  background-color: var(--pink-dark);
+}
+
+/* Response panel styles */
+.response-panel {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+}
+
+.response-panel .ant-card {
+  height: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(255, 128, 191, 0.1);
+  border: 1px solid var(--pink-medium);
+}
+
+.response-panel.loading .loader {
+  margin: 20px auto;
+  border: 4px solid var(--pink-light);
+  border-top: 4px solid var(--pink-primary);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Method tag colors - make them more cute and girly */
+.ant-tag {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.http-method-get, .ant-tag-blue {
+  color: #2980b9 !important;
+  background-color: #e8f4fc !important;
+  border-color: #bedaf7 !important;
+}
+
+.http-method-post, .ant-tag-green {
+  color: #27ae60 !important;
+  background-color: #e6f8ed !important;
+  border-color: #b7ebc8 !important;
+}
+
+.http-method-put, .ant-tag-orange {
+  color: #f39c12 !important;
+  background-color: #fef6e6 !important;
+  border-color: #ffe58f !important;
+}
+
+.http-method-delete, .ant-tag-red {
+  color: #e74c3c !important;
+  background-color: #feecea !important;
+  border-color: #fcd4d0 !important;
+}
+
+/* Key-value editor */
+.key-value-editor .ant-table-cell {
+  padding: 8px 12px !important;
+}
+
+.key-value-editor .ant-table {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.key-value-editor .ant-btn-dashed {
+  border-color: var(--pink-primary);
+  color: var(--pink-primary);
+}
+
+.key-value-editor .ant-btn-dashed:hover {
+  border-color: var(--pink-extra-dark);
+  color: var(--pink-extra-dark);
+}
+
+/* JSON viewer styles */
+.json-viewer {
+  padding: 14px;
+  background-color: var(--pink-light);
+  border-radius: var(--border-radius);
+  overflow: auto;
+  max-height: 600px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 13px;
+}
+
+/* Make collections tree items clickable */
+.collections .ant-tree-node-content-wrapper {
+  width: 100%;
+}
+
+/* Custom button styles */
+.ant-btn-primary {
+  background-color: var(--pink-primary);
+}
+
+.ant-btn-primary:hover {
+  background-color: var(--pink-dark) !important;
+}
+
+/* Response body */
+.response-body-content {
+  margin-top: 10px;
+}
+
+/* Custom scrollbar for a cute look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pink-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-medium);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-primary);
+}
+
+/* Menu styling */
+.ant-menu-item-selected {
+  background-color: var(--pink-light) !important;
+  color: var(--pink-dark) !important;
+}
+
+.ant-menu-item:hover {
+  color: var(--pink-primary) !important;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+  border-right: 3px solid var(--pink-dark) !important;
+}
+
+/* Input styling */
+.ant-input:hover {
+  border-color: var(--pink-primary);
+}
+
+.ant-input:focus, .ant-input-focused {
+  border-color: var(--pink-primary);
+  box-shadow: 0 0 0 2px rgba(255, 128, 191, 0.2);
+}
+
+/* Cute animation for the send button */
+.send-button {
+  transition: transform 0.3s ease;
+}
+
+.send-button:hover {
+  transform: scale(1.05);
+}
+
+/* Loader animation */
+.loading-animation {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loading-animation div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--pink-primary);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading-animation div:nth-child(1) {
+  left: 8px;
+  animation: loading-animation1 0.6s infinite;
+}
+
+.loading-animation div:nth-child(2) {
+  left: 8px;
+  animation: loading-animation2 0.6s infinite;
+}
+
+.loading-animation div:nth-child(3) {
+  left: 32px;
+  animation: loading-animation2 0.6s infinite;
+}
+
+.loading-animation div:nth-child(4) {
+  left: 56px;
+  animation: loading-animation3 0.6s infinite;
+}
+
+@keyframes loading-animation1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loading-animation3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes loading-animation2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* App header styling */
+.app-header {
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(255, 128, 191, 0.15);
+  border-bottom: 1px solid var(--pink-medium);
+}
+
+/* Cute emoji badge styles */
+.emoji-badge {
+  font-size: 18px;
+  margin-right: 6px;
+}
